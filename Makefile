@@ -22,7 +22,7 @@ lint:             ## Run pep8, black, mypy linters.
 
 .PHONY: format
 format:              ## Format code using black & isort.
-	poetry run isort --profile=black, --line-length=120 $(PROJECT_NAME)
+	poetry run isort --profile=black --line-length=120 $(PROJECT_NAME)
 	poetry run black -l 120 $(PROJECT_NAME)
 	poetry run black -l 120 tests/
 
